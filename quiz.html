@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Викторина — NEFFEX, фан-страница</title>
+  <meta name="theme-color" content="#050508">
+  <meta name="description" content="Викторина о NEFFEX: проверьте, насколько хорошо вы знаете историю проекта.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Unbounded:wght@500;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="quiz.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">NEFFEX</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Основная навигация">
+        <a href="index.html#story" class="site-nav__link">История</a>
+        <a href="index.html#gallery" class="site-nav__link">Атмосфера</a>
+        <a href="index.html#music" class="site-nav__link">Музыка</a>
+        <a href="index.html#creators" class="site-nav__link">Для авторов</a>
+        <a href="quiz.html" class="site-nav__link is-active" aria-current="page">Викторина</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="quiz-hero">
+      <div class="container">
+        <a class="back-link" href="index.html">← На главную</a>
+        <h1 class="quiz-hero__title">Викторина</h1>
+        <p class="quiz-hero__lead">
+          Восемь вопросов о NEFFEX. Все ответы есть на главной странице, так что
+          внимательные читатели наберут максимум.
+        </p>
+        <p class="quiz-hero__best" id="bestScore" hidden></p>
+      </div>
+    </section>
+
+    <section class="section quiz-section">
+      <div class="container">
+        <div class="quiz" id="quiz">
+
+          <!-- Прогресс: по сегменту на вопрос -->
+          <div class="quiz__progress" id="quizProgress" aria-hidden="true"></div>
+
+          <!-- Экран вопроса -->
+          <div class="quiz__screen" id="quizQuestion">
+            <p class="quiz__step" id="quizStep"></p>
+            <h2 class="quiz__question" id="quizText" tabindex="-1"></h2>
+            <div class="quiz__options" id="quizOptions" role="group" aria-labelledby="quizText"></div>
+            <p class="quiz__feedback" id="quizFeedback" aria-live="polite" hidden></p>
+            <button class="btn btn--neon quiz__next" id="quizNext" type="button" hidden>Следующий вопрос</button>
+          </div>
+
+          <!-- Экран результата -->
+          <div class="quiz__screen" id="quizResult" hidden>
+            <p class="quiz__step">Результат</p>
+            <p class="quiz__score"><span id="resultScore">0</span><span class="quiz__score-total">/8</span></p>
+            <h2 class="quiz__result-title" id="resultTitle" tabindex="-1"></h2>
+            <p class="quiz__result-text" id="resultText"></p>
+            <div class="quiz__result-actions">
+              <button class="btn btn--neon" id="quizRestart" type="button">Пройти ещё раз</button>
+              <a class="btn btn--outline" href="index.html#story">Перечитать историю</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand">NEFFEX</p>
+      <p>Неофициальная фан-страница. Не связана с артистом или его командой.</p>
+      <a class="site-footer__top" href="index.html">На главную</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>

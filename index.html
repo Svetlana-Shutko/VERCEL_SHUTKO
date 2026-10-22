@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NEFFEX — фан-страница</title>
+  <meta name="theme-color" content="#050508">
+  <meta name="description" content="Неофициальная фан-страница NEFFEX: история проекта, известные треки, избранное и генератор подписи для авторов видео.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Unbounded:wght@500;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="#top">NEFFEX</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Основная навигация">
+        <a href="#story" class="site-nav__link">История</a>
+        <a href="#gallery" class="site-nav__link">Атмосфера</a>
+        <a href="#music" class="site-nav__link">Музыка</a>
+        <a href="#creators" class="site-nav__link">Для авторов</a>
+        <a href="quiz.html" class="site-nav__link site-nav__link--accent">Викторина</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Первый экран -->
+    <section class="hero" id="top">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__title">NEFFEX</h1>
+          <p class="hero__lead">
+            Рэп и электроника из Калифорнии. Проект, который однажды взялся выпускать
+            по песне каждую неделю — и не сбился сто недель подряд.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--neon" href="https://open.spotify.com/search/NEFFEX" target="_blank" rel="noopener">Слушать на Spotify</a>
+            <a class="btn btn--outline" href="https://www.youtube.com/@NEFFEX" target="_blank" rel="noopener">Открыть YouTube</a>
+          </div>
+          <a class="hero__quiz" href="quiz.html">Насколько хорошо вы знаете NEFFEX? Пройдите викторину →</a>
+        </div>
+
+        <figure class="weeks">
+          <div class="weeks__grid" id="weeksGrid" role="img" aria-label="Сто клеток — по одной на каждую неделю челленджа"></div>
+          <figcaption class="weeks__caption">
+            <span class="weeks__count"><span id="weeksCount">0</span>/100</span>
+            <span class="weeks__label">недель, песня в каждой</span>
+            <button class="weeks__replay" id="weeksReplay" type="button">Ещё раз</button>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- История -->
+    <section class="section" id="story" aria-labelledby="storyTitle">
+      <div class="container">
+        <h2 class="section__title" id="storyTitle">Как всё было</h2>
+        <p class="section__intro">
+          Двое друзей играли вместе в школьной панк-группе, разошлись по колледжам,
+          а потом снова собрались — уже чтобы делать свою музыку.
+        </p>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__year">2014</span>
+            <div class="timeline__body">
+              <h3>Начало в Орандж-Каунти</h3>
+              <p>Вокалист и автор текстов Брайс Сэвидж и продюсер Кэмерон Уэйлс основывают NEFFEX. Звук — смесь рэпа и электроники, записанная в съёмной квартире.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__year">2017</span>
+            <div class="timeline__body">
+              <h3>Челлендж «100 песен»</h3>
+              <p>По новому синглу каждую неделю на протяжении ста недель. Из этого марафона вышли вирусные «Rumors» и «Fight Back».</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__year">2020</span>
+            <div class="timeline__body">
+              <h3>Альбом New Beginnings</h3>
+              <p>Первый цельный полноформатный релиз — более собранный, чем поток синглов до него.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__year">2021</span>
+            <div class="timeline__body">
+              <h3>Сольный путь</h3>
+              <p>В июле дуэт расходится по-дружески: Уэйлс уходит в сольный проект, а Сэвидж продолжает NEFFEX один и запускает второй марафон из ста песен.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__year">2023</span>
+            <div class="timeline__body">
+              <h3>Тур Born a Rockstar</h3>
+              <p>Концерты в 25 городах Европы и Северной Америки.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="section section--tinted" id="gallery" aria-labelledby="galleryTitle">
+      <div class="container">
+        <h2 class="section__title" id="galleryTitle">Три места, где живёт эта музыка</h2>
+        <p class="section__intro">Нажмите на картинку, чтобы открыть её крупнее.</p>
+
+        <div class="gallery">
+          <button class="gallery__item gallery__item--wide" type="button" data-caption="Сцена. В 2023 году тур Born a Rockstar прошёл по 25 городам Европы и Северной Америки.">
+            <img src="stage.svg" alt="Неоновая иллюстрация: артист на сцене в лучах прожекторов, перед ним толпа с поднятыми руками" loading="lazy">
+            <span class="gallery__caption">Сцена</span>
+          </button>
+          <button class="gallery__item" type="button" data-caption="Студия. Сто недель подряд: новый бит, новый текст, новая запись.">
+            <img src="studio.svg" alt="Неоновая иллюстрация: наушники над светящимся эквалайзером" loading="lazy">
+            <span class="gallery__caption">Студия</span>
+          </button>
+          <button class="gallery__item" type="button" data-caption="Онлайн. Треки NEFFEX звучат в тысячах роликов авторов по всему миру.">
+            <img src="creators.svg" alt="Неоновая иллюстрация: видеоплеер с кнопкой воспроизведения и звуковой волной" loading="lazy">
+            <span class="gallery__caption">Онлайн</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Музыка -->
+    <section class="section" id="music" aria-labelledby="musicTitle">
+      <div class="container">
+        <h2 class="section__title" id="musicTitle">Треки, с которых стоит начать</h2>
+        <p class="section__intro">
+          Отмечайте сердцем то, что понравилось, — избранное сохранится в этом браузере.
+        </p>
+
+        <div class="music-controls">
+          <label class="search">
+            <span class="visually-hidden">Поиск по трекам</span>
+            <input type="search" id="trackSearch" placeholder="Найти трек" autocomplete="off">
+          </label>
+          <button class="chip" id="favFilter" type="button" aria-pressed="false">
+            Только избранное <span class="chip__count" id="favCount">0</span>
+          </button>
+        </div>
+
+        <ul class="tracks" id="trackList" aria-live="polite"></ul>
+        <p class="tracks__empty" id="tracksEmpty" hidden></p>
+      </div>
+    </section>
+
+    <!-- Для авторов -->
+    <section class="section section--tinted" id="creators" aria-labelledby="creatorsTitle">
+      <div class="container creators">
+        <div class="creators__text">
+          <h2 class="section__title" id="creatorsTitle">Музыка для ваших видео</h2>
+          <p>
+            Во многом NEFFEX стал известен благодаря тому, что разрешал авторам
+            бесплатно использовать свои песни в роликах. Поэтому его треки звучат
+            в тысячах видео на YouTube и в соцсетях.
+          </p>
+          <p class="note">
+            Условия использования со временем могут меняться. Прежде чем
+            публиковать видео, сверьтесь с актуальными правилами на официальных
+            ресурсах артиста.
+          </p>
+        </div>
+
+        <form class="credit" id="creditForm" novalidate>
+          <h3 class="credit__title">Подпись для описания видео</h3>
+
+          <label class="field">
+            <span class="field__label">Название трека</span>
+            <input type="text" id="creditTrack" list="trackOptions" placeholder="Например, Fight Back" required>
+            <datalist id="trackOptions"></datalist>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Язык подписи</span>
+            <select id="creditLang">
+              <option value="ru">Русский</option>
+              <option value="en">English</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Готовый текст</span>
+            <textarea id="creditOutput" rows="4" readonly></textarea>
+          </label>
+
+          <p class="field__error" id="creditError" hidden>Введите название трека, чтобы получить подпись.</p>
+
+          <button class="btn btn--neon btn--block" type="submit">Скопировать подпись</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand">NEFFEX</p>
+      <p>Неофициальная фан-страница. Не связана с артистом или его командой.</p>
+      <a class="site-footer__link" href="quiz.html">Викторина</a>
+      <a class="site-footer__top" href="#top">Наверх</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр изображения">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Закрыть">×</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
